@@ -5,6 +5,7 @@ USER root
 RUN apt-get update
 
 RUN sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
+RUN sudo apt-get install default-jdk 
 
 WORKDIR /base-rails
 
@@ -20,6 +21,7 @@ RUN sudo chmod +x /usr/bin/chromedriver
 RUN wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
 RUN wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
 RUN unzip testng-6.8.7.jar.zip
+
 RUN xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone.jar
 RUN chromedriver --url-base=/wd/hub
 
