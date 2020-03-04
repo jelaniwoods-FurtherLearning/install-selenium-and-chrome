@@ -5,7 +5,7 @@ USER root
 RUN apt-get update
 
 RUN sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4
-RUN sudo apt-get install default-jdk 
+RUN sudo apt-get install default-jdk -y
 
 WORKDIR /base-rails
 
