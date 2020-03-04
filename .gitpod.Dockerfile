@@ -26,8 +26,8 @@ RUN wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-st
 RUN wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
 RUN unzip testng-6.8.7.jar.zip
 
-RUN xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone-3.13.0.jar
-RUN chromedriver --url-base=/wd/hub
+# RUN xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone-3.13.0.jar
+# RUN chromedriver --url-base=/wd/hub
 
 USER gitpod
 
